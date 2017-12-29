@@ -1,0 +1,3 @@
+[submodule "submodules/OAuthKit"]
+	path = submodules/OAuthKit
+	url = https://github.com/muhammadbassio/OAuthKit.git

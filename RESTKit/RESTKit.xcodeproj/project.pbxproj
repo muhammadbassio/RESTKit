@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		8E87E2411FF5546000E4C115 /* RESTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E87E23F1FF5546000E4C115 /* RESTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E9E4A8B1FF697A000E9A45B /* OAuthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E9E4A8C1FF697A000E9A45B /* OAuthKit.framework */; };
+		8E9E4A8F1FF697D900E9A45B /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9E4A8E1FF697D900E9A45B /* APIEndPoint.swift */; };
+		8E9E4A911FF6981900E9A45B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9E4A901FF6981900E9A45B /* APIManager.swift */; };
+		8E9E4A931FF69CC100E9A45B /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9E4A921FF69CC100E9A45B /* APIConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E87E23C1FF5546000E4C115 /* RESTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RESTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E87E23F1FF5546000E4C115 /* RESTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESTKit.h; sourceTree = "<group>"; };
 		8E87E2401FF5546000E4C115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E9E4A8C1FF697A000E9A45B /* OAuthKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OAuthKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E9E4A8E1FF697D900E9A45B /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
+		8E9E4A901FF6981900E9A45B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		8E9E4A921FF69CC100E9A45B /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9E4A8B1FF697A000E9A45B /* OAuthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +41,7 @@
 			children = (
 				8E87E23E1FF5546000E4C115 /* RESTKit */,
 				8E87E23D1FF5546000E4C115 /* Products */,
+				8E9E4A8A1FF697A000E9A45B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +56,29 @@
 		8E87E23E1FF5546000E4C115 /* RESTKit */ = {
 			isa = PBXGroup;
 			children = (
+				8E9E4A8D1FF697B700E9A45B /* source */,
 				8E87E23F1FF5546000E4C115 /* RESTKit.h */,
 				8E87E2401FF5546000E4C115 /* Info.plist */,
 			);
 			path = RESTKit;
+			sourceTree = "<group>";
+		};
+		8E9E4A8A1FF697A000E9A45B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E9E4A8C1FF697A000E9A45B /* OAuthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E9E4A8D1FF697B700E9A45B /* source */ = {
+			isa = PBXGroup;
+			children = (
+				8E9E4A8E1FF697D900E9A45B /* APIEndPoint.swift */,
+				8E9E4A901FF6981900E9A45B /* APIManager.swift */,
+				8E9E4A921FF69CC100E9A45B /* APIConfiguration.swift */,
+			);
+			path = source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +124,7 @@
 				TargetAttributes = {
 					8E87E23B1FF5546000E4C115 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9E4A911FF6981900E9A45B /* APIManager.swift in Sources */,
+				8E9E4A931FF69CC100E9A45B /* APIConfiguration.swift in Sources */,
+				8E9E4A8F1FF697D900E9A45B /* APIEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +286,7 @@
 		8E87E2451FF5546000E4C115 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -267,6 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.bassio.libs.RESTKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -275,6 +310,7 @@
 		8E87E2461FF5546000E4C115 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
