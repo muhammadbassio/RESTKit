@@ -24,6 +24,11 @@ open class APIManager {
     
   }
   
+  /// Override to provide your own logic
+  open func saveToken() {
+    
+  }
+  
   open func sendRequest(endPoint:APIEndPoint, completion:@escaping ((_ response:DataResponse<Any>) -> Void)) {
     var headers = self.configuration.mainHeaders
     if endPoint.requiresAuthentication {
