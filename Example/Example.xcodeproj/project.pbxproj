@@ -12,7 +12,26 @@
 		8E87E2591FF5547800E4C115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E87E2571FF5547800E4C115 /* Main.storyboard */; };
 		8E87E25B1FF5547800E4C115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E87E25A1FF5547800E4C115 /* Assets.xcassets */; };
 		8E87E25E1FF5547800E4C115 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E87E25C1FF5547800E4C115 /* LaunchScreen.storyboard */; };
+		8E906B81204442E400250CF8 /* OAuthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E906B80204442E400250CF8 /* OAuthKit.framework */; };
+		8E906B82204442E400250CF8 /* OAuthKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E906B80204442E400250CF8 /* OAuthKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8E906B84204442E400250CF8 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E906B83204442E400250CF8 /* RESTKit.framework */; };
+		8E906B85204442E400250CF8 /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E906B83204442E400250CF8 /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8E906B86204442E400250CF8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8E906B82204442E400250CF8 /* OAuthKit.framework in Embed Frameworks */,
+				8E906B85204442E400250CF8 /* RESTKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8E87E2501FF5547800E4C115 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +41,8 @@
 		8E87E25A1FF5547800E4C115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E87E25D1FF5547800E4C115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E87E25F1FF5547800E4C115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E906B80204442E400250CF8 /* OAuthKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OAuthKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E906B83204442E400250CF8 /* RESTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RESTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E906B81204442E400250CF8 /* OAuthKit.framework in Frameworks */,
+				8E906B84204442E400250CF8 /* RESTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +61,8 @@
 		8E87E2471FF5547800E4C115 = {
 			isa = PBXGroup;
 			children = (
+				8E906B83204442E400250CF8 /* RESTKit.framework */,
+				8E906B80204442E400250CF8 /* OAuthKit.framework */,
 				8E87E2521FF5547800E4C115 /* Example */,
 				8E87E2511FF5547800E4C115 /* Products */,
 			);
@@ -74,6 +99,7 @@
 				8E87E24C1FF5547800E4C115 /* Sources */,
 				8E87E24D1FF5547800E4C115 /* Frameworks */,
 				8E87E24E1FF5547800E4C115 /* Resources */,
+				8E906B86204442E400250CF8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
